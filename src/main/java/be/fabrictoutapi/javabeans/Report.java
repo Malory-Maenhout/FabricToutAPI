@@ -7,10 +7,18 @@ public class Report implements Serializable {
 
 	//Attributes/Variables
 	private static final long serialVersionUID = -2265362790380307095L;
+	private int id;
 	private String description;
 	private Date date;
+	private Worker worker;
 
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getDescription() {
 		return description;
 	}
@@ -23,6 +31,12 @@ public class Report implements Serializable {
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public Worker getWorker() {
+		return worker;
+	}
+	public void setWorker(Worker worker) {
+		this.worker = worker;
 	}
 	
 	//Constructor

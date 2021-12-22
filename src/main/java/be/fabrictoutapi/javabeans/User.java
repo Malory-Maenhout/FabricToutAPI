@@ -14,8 +14,9 @@ public abstract class User {
 	private int postalCode;
 	private int phoneNumber;
 	private String emailAddress;
-	private String matricule;
+	private String personelNumber;
 	private String password;
+	private String discriminator;
 	private boolean active;
 	
 	//Getters & Setters
@@ -82,11 +83,11 @@ public abstract class User {
 		this.emailAddress = emailAddress;
 	}
 	
-	public String getMatricule() {
-		return matricule;
+	public String getPersonelNumber() {
+		return personelNumber;
 	}
-	public void setMatricule(String matricule) {
-		this.matricule = matricule;
+	public void setPersonelNumber(String personelNumber) {
+		this.personelNumber = personelNumber;
 	}
 	
 	public String getPassword() {
@@ -95,7 +96,12 @@ public abstract class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+	public String getDiscriminator() {
+		return discriminator;
+	}
+	public void setDiscriminator(String discriminator) {
+		this.discriminator = discriminator;
+	}	
 	public boolean isActive() {
 		return active;
 	}
@@ -109,7 +115,7 @@ public abstract class User {
 	}
 	
 	public User(String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
-			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, boolean active) {
+			int postalCode, int phoneNumber, String emailAddress, String personelNumber, String password, boolean active) {
 		super();
 		this.firstname = firstname;
 		this.lastname = lastname;
@@ -120,7 +126,7 @@ public abstract class User {
 		this.postalCode = postalCode;
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
-		this.matricule = matricule;
+		this.personelNumber = personelNumber;
 		this.password = password;
 		this.active = active;
 	}

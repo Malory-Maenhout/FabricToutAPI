@@ -10,6 +10,7 @@ public class Maintenance implements Serializable{
 
 	//Attributes/Variables
 	private static final long serialVersionUID = 7964490051068044299L;
+	private int id;
 	private Date date;
 	private int duration;
 	private StatusEnum status;
@@ -17,6 +18,12 @@ public class Maintenance implements Serializable{
 	private List<Report> maintenanceReportList = new ArrayList<Report>();
 	private Machine machine;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	//Getters & Setters
 	public Date getDate() {
 		return date;
