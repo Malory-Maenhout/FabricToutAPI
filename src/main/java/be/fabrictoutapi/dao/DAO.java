@@ -13,4 +13,5 @@ public abstract class DAO<T> {
 	public abstract boolean delete(T obj);
 	public abstract boolean update(T obj);
 	public abstract T find(int id);
+	public abstract T find(String str1, String str2);
 }

@@ -8,12 +8,20 @@ public class Area implements Serializable {
 
 	//Attributes/Variables
 	private static final long serialVersionUID = -5609292885299153581L;
+	private int id;
 	private char letter;
 	private ColorEnum color;
 	private String description;
 	private List<Machine> machineList = new ArrayList<Machine>();
 	
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public char getLetter() {
 		return letter;
 	}
@@ -53,8 +61,9 @@ public class Area implements Serializable {
 		super();
 	}
 	
-	public Area(char letter, ColorEnum color, String description) {
+	public Area(int id, char letter, ColorEnum color, String description) {
 		super();
+		this.id = id;
 		this.letter = letter;
 		this.color = color;
 		this.description = description;

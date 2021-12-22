@@ -29,4 +29,9 @@ public class ManagerDAO extends DAO<Manager>{
 	public Manager find(int id) {
 		return null;
 	}
+
+	@Override
+	public Manager find(String str1, String str2) {
+		return null;
+	}
 }

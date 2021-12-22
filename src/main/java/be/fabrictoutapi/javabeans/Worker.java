@@ -2,26 +2,19 @@ package be.fabrictoutapi.javabeans;
 
 import java.io.Serializable;
 import java.sql.Date;
-import java.util.*;
 
 public class Worker extends User implements Serializable {
 
 	//Attributes/Variables
 	private static final long serialVersionUID = 288501069493727942L;
-	private List<Maintenance> maintenanceList = new ArrayList<Maintenance>();
+	private Report report;
 	
 	//Getters & Setters
-	public List<Maintenance> getMaintenanceList() {
-		return maintenanceList;
+	public Report getReport() {
+		return report;
 	}
-	public void setMaintenanceList(List<Maintenance> maintenanceList) {
-		this.maintenanceList = maintenanceList;
-	}	
-	public void addMaintenance(Maintenance maintenance) {
-			this.maintenanceList.add(maintenance);
-	}	
-	public void removeMaintenance(Maintenance maintenance) {
-		this.maintenanceList.remove(maintenance);
+	public void setReport(Report report) {
+		this.report = report;
 	}
 	
 	//Constructor
@@ -29,9 +22,9 @@ public class Worker extends User implements Serializable {
 		super();
 	}
 	
-	public Worker(String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
-			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, boolean active) {
-		super(firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, matricule, password,
+	public Worker(int id, String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
+			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, String discriminator, boolean active) {
+		super(id, firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, matricule, password, discriminator,
 				active);
 	}	
 	

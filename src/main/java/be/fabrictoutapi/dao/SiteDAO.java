@@ -29,4 +29,9 @@ public class SiteDAO extends DAO<Site>{
 	public Site find(int id) {
 		return null;
 	}
+
+	@Override
+	public Site find(String str1, String str2) {
+		return null;
+	}
 }

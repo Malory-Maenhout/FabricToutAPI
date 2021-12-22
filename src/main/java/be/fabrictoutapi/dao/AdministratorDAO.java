@@ -29,4 +29,9 @@ public class AdministratorDAO extends DAO<Administrator> {
 	public Administrator find(int id) {
 		return null;
 	}
+
+	@Override
+	public Administrator find(String str1, String str2) {
+		return null;
+	}
 }

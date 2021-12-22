@@ -11,6 +11,7 @@ public class Machine implements Serializable{
 
 	//Attributes/Variables
 	private static final long serialVersionUID = -3024905420459179567L;
+	private int id;
 	private String name;
 	private SizeEnum size;
 	private StatusMachineEnum status;
@@ -21,6 +22,13 @@ public class Machine implements Serializable{
 	private List<Area> areaList = new ArrayList<Area>();
 	
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getName() {
 		return name;
 	}
@@ -94,8 +102,9 @@ public class Machine implements Serializable{
 		super();
 	}
 	
-	public Machine(String name, SizeEnum size, StatusMachineEnum status, boolean replace, String serialNumber, List<Area> areaList) {
+	public Machine(int id, String name, SizeEnum size, StatusMachineEnum status, boolean replace, String serialNumber, List<Area> areaList) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.size = size;
 		this.status = status;

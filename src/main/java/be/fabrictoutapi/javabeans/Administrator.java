@@ -29,9 +29,9 @@ public class Administrator extends User implements Serializable{
 		super();
 	}
 	
-	public Administrator(String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
-			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, boolean active) {
-		super(firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, matricule, password,
+	public Administrator(int id, String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
+			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, String discriminator, boolean active) {
+		super(id, firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, matricule, password, discriminator,
 				active);
 	}
 	

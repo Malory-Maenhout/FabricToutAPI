@@ -29,4 +29,9 @@ public class ReportDAO extends DAO<Report>{
 	public Report find(int id) {
 		return null;
 	}
+
+	@Override
+	public Report find(String str1, String str2) {
+		return null;
+	}
 }

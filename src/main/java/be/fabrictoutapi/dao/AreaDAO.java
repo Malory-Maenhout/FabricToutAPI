@@ -29,4 +29,9 @@ public class AreaDAO extends DAO<Area> {
 	public Area find(int id) {
 		return null;
 	}
+
+	@Override
+	public Area find(String str1, String str2) {
+		return null;
+	}
 }

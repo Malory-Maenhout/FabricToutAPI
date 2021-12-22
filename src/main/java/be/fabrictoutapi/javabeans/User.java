@@ -5,6 +5,7 @@ import java.sql.Date;
 public abstract class User {
 	
 	//Attributes/Variables
+	private int id;
 	private String firstname;
 	private String lastname;
 	private String address;
@@ -14,11 +15,19 @@ public abstract class User {
 	private int postalCode;
 	private int phoneNumber;
 	private String emailAddress;
-	private String matricule;
+	private String personnelNumber;
 	private String password;
+	private String discriminator;
 	private boolean active;
 	
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getFirstname() {
 		return firstname;
 	}
@@ -82,11 +91,11 @@ public abstract class User {
 		this.emailAddress = emailAddress;
 	}
 	
-	public String getMatricule() {
-		return matricule;
+	public String getPersonnelNumber() {
+		return personnelNumber;
 	}
-	public void setMatricule(String matricule) {
-		this.matricule = matricule;
+	public void setPersonnelNumber(String personnelNumber) {
+		this.personnelNumber = personnelNumber;
 	}
 	
 	public String getPassword() {
@@ -94,6 +103,13 @@ public abstract class User {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getDiscriminator() {
+		return discriminator;
+	}
+	public void setDiscriminator(String discriminator) {
+		this.discriminator = discriminator;
 	}
 	
 	public boolean isActive() {
@@ -108,9 +124,10 @@ public abstract class User {
 		super();
 	}
 	
-	public User(String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
-			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, boolean active) {
+	public User(int id, String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
+			int postalCode, int phoneNumber, String emailAddress, String personnelNumber, String password, String discriminator, boolean active) {
 		super();
+		this.id = id;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.address = address;
@@ -120,8 +137,9 @@ public abstract class User {
 		this.postalCode = postalCode;
 		this.phoneNumber = phoneNumber;
 		this.emailAddress = emailAddress;
-		this.matricule = matricule;
+		this.personnelNumber = personnelNumber;
 		this.password = password;
+		this.discriminator = discriminator;
 		this.active = active;
 	}
 

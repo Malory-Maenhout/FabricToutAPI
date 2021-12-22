@@ -29,4 +29,9 @@ public class MachineDAO extends DAO<Machine> {
 	public Machine find(int id) {
 		return null;
 	}
+
+	@Override
+	public Machine find(String str1, String str2) {
+		return null;
+	}
 }

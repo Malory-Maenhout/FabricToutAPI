@@ -29,4 +29,9 @@ public class MaintenanceDAO extends DAO<Maintenance>{
 	public Maintenance find(int id) {
 		return null;
 	}
+
+	@Override
+	public Maintenance find(String str1, String str2) {
+		return null;
+	}
 }

@@ -10,14 +10,21 @@ public class Maintenance implements Serializable{
 
 	//Attributes/Variables
 	private static final long serialVersionUID = 7964490051068044299L;
+	private int id;
 	private Date date;
 	private int duration;
 	private StatusEnum status;
-	private List<Worker> maintenanceWorkerList = new ArrayList<Worker>(); 
 	private List<Report> maintenanceReportList = new ArrayList<Report>();
 	private Machine machine;
 	
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public Date getDate() {
 		return date;
 	}
@@ -37,19 +44,6 @@ public class Maintenance implements Serializable{
 	}
 	public void setStatus(StatusEnum status) {
 		this.status = status;
-	}
-	
-	public List<Worker> getMaintenanceWorkerList() {
-		return maintenanceWorkerList;
-	}
-	public void setMaintenanceWorkerList(List<Worker> maintenanceWorkerList) {
-		this.maintenanceWorkerList = maintenanceWorkerList;
-	}	
-	public void addMaintenanceWorker(Worker maintenanceWorker) {
-			this.maintenanceWorkerList.add(maintenanceWorker);
-	}	
-	public void removeMaintenanceWorker(Worker maintenanceWorker) {
-		this.maintenanceWorkerList.remove(maintenanceWorker);
 	}
 	
 	public List<Report> getMaintenanceReportList() {
@@ -77,12 +71,13 @@ public class Maintenance implements Serializable{
 		super();
 	}
 	
-	public Maintenance(Date date, int duration, StatusEnum status, List<Worker> maintenanceWorkerList, Machine machine) {
+	public Maintenance(int id, Date date, int duration, StatusEnum status, List<Report> maintenanceReportList, Machine machine) {
 		super();
+		this.id = id;
 		this.date = date;
 		this.duration = duration;
 		this.status = status;
-		this.maintenanceWorkerList = maintenanceWorkerList;
+		this.maintenanceReportList = maintenanceReportList;
 		this.machine = machine;
 	}
 	

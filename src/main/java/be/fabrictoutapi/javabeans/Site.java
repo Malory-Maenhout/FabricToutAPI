@@ -7,12 +7,20 @@ public class Site implements Serializable{
 
 	//Attributes/Variables
 	private static final long serialVersionUID = -2029987917469699914L;
+	private int id;
 	private String city;
 	private String country;
 	private List<User> userList = new ArrayList<User>();
 	private List<Area> areaList = new ArrayList<Area>();
 	
 	//Getters & Setters
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getCity() {
 		return city;
 	}
@@ -58,8 +66,9 @@ public class Site implements Serializable{
 		super();
 	}
 
-	public Site(String city, String country) {
+	public Site(int id, String city, String country) {
 		super();
+		this.id = id;
 		this.city = city;
 		this.country = country;
 	}

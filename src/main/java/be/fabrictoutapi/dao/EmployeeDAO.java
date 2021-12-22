@@ -29,4 +29,9 @@ public class EmployeeDAO extends DAO<Employee> {
 	public Employee find(int id) {
 		return null;
 	}
+
+	@Override
+	public Employee find(String str1, String str2) {
+		return null;
+	}
 }
