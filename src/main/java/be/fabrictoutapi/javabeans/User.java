@@ -91,10 +91,10 @@ public abstract class User {
 		this.emailAddress = emailAddress;
 	}
 	
-	public String getPersonelNumber() {
+	public String getPersonnelNumber() {
 		return personnelNumber;
 	}
-	public void setPersonelNumber(String personnelNumber) {
+	public void setPersonnelNumber(String personnelNumber) {
 		this.personnelNumber = personnelNumber;
 	}
 	

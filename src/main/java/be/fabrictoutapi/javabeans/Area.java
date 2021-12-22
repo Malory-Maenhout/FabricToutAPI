@@ -21,10 +21,7 @@ public class Area implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-<<<<<<< HEAD
 	
-=======
->>>>>>> 92ff7125b1daf93286d63825f3cbd313dabb073d
 	public char getLetter() {
 		return letter;
 	}

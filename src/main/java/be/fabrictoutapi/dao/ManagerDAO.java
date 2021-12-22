@@ -97,9 +97,4 @@ public class ManagerDAO extends DAO<Manager>{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public Manager find(String str1, String str2) {
-		return null;
-	}
 }

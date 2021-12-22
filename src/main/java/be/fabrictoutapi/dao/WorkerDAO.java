@@ -43,9 +43,4 @@ public class WorkerDAO extends DAO<Worker> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
-	@Override
-	public Worker find(String str1, String str2) {
-		return null;
-	}
 }

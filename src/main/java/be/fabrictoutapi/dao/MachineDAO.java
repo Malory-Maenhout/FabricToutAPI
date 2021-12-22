@@ -140,11 +140,6 @@ public class MachineDAO extends DAO<Machine> {
 		return null;
 	}
 
-	@Override
-<<<<<<< HEAD
-	public Machine find(String str1, String str2) {
-		return null;
-=======
 	public ArrayList<Machine> findall() {
 		String querry = "SELECT * FROM FT_MACHINE";
 		ArrayList<Machine> machines = new ArrayList<>();
@@ -185,7 +180,7 @@ public class MachineDAO extends DAO<Machine> {
 					machine.setReplace(true);
 				else
 					machine.setReplace(false);
-				// Charger liste de maintenance 
+				
 				String querry2 = "SELECT * FROM FT_MAINTENANCE WHERE id_machine='" + machine.getId() + "'";
 				ResultSet result2 = this.connect
 						.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
@@ -208,7 +203,7 @@ public class MachineDAO extends DAO<Machine> {
 						maintenance.setStatus(StatusEnum.InValidate);
 					machine.getMaintenanceList().add(maintenance);
 				}
-				// Charger liste de area
+				
 				String querry3 = "SELECT * FROM FT_AREA_MACHINE WHERE machine='" + machine.getId() + "'";
 				ResultSet result3 = this.connect
 						.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
@@ -248,6 +243,5 @@ public class MachineDAO extends DAO<Machine> {
 		} catch (SQLException e) {
 			return null;
 		}
->>>>>>> 92ff7125b1daf93286d63825f3cbd313dabb073d
 	}
 }

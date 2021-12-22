@@ -52,9 +52,7 @@ public class MaintenanceDAO extends DAO<Maintenance>{
 					maintenance.setStatus(StatusEnum.Validate);
 				else if (s.equals("InValidate"))
 					maintenance.setStatus(StatusEnum.InValidate);
-				// Charger liste ouvrier
 				
-				// Charger liste rapport
 				String querry2 = "SELECT * FROM FT_REPORT WHERE id_maintenance='" + id +"'";
 				ResultSet result2 = this.connect
 						.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
@@ -68,7 +66,7 @@ public class MaintenanceDAO extends DAO<Maintenance>{
 					w = new UserDAO(this.connect).find(id);
 					report.setWorker((Worker) w);
 				}
-				// Set machine -- appel machinedao.find(id)
+				
 				Machine m = new MachineDAO(this.connect).find(result.getInt("id_machine"));
 				maintenance.setMachine(m);
 				return maintenance;
@@ -88,11 +86,6 @@ public class MaintenanceDAO extends DAO<Maintenance>{
 	@Override
 	public ArrayList<Maintenance> findall() {
 		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Maintenance find(String str1, String str2) {
 		return null;
 	}
 }

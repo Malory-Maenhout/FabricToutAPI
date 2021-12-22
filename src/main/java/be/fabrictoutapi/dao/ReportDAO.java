@@ -33,8 +33,6 @@ public class ReportDAO extends DAO<Report>{
 
 	@Override
 	public Report find(String str1, String str2) {
-<<<<<<< HEAD
-=======
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -42,7 +40,6 @@ public class ReportDAO extends DAO<Report>{
 	@Override
 	public ArrayList<Report> findall() {
 		// TODO Auto-generated method stub
->>>>>>> 92ff7125b1daf93286d63825f3cbd313dabb073d
 		return null;
 	}
 }

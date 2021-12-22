@@ -42,7 +42,7 @@ public class SiteDAO extends DAO<Site>{
 				site.setId(result.getInt("ID"));
 				site.setCity(result.getString("CITY"));
 				site.setCountry(result.getString("COUNTRY"));
-				// appel de la liste des area
+				
 				String querry2 = "SELECT * FROM FT_AREA WHERE id_site='" + id + "'";
 				ResultSet result2 = this.connect
 						.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY)
@@ -82,11 +82,6 @@ public class SiteDAO extends DAO<Site>{
 
 	@Override
 	public Site find(String str1, String str2) {
-<<<<<<< HEAD
-		return null;
-	}
-=======
-		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -114,5 +109,4 @@ public class SiteDAO extends DAO<Site>{
 			return null;
 		}
 	}
->>>>>>> 92ff7125b1daf93286d63825f3cbd313dabb073d
 }

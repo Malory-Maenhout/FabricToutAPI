@@ -17,12 +17,6 @@ public class Maintenance implements Serializable{
 	private List<Report> maintenanceReportList = new ArrayList<Report>();
 	private Machine machine;
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	//Getters & Setters
 	public int getId() {
 		return id;
