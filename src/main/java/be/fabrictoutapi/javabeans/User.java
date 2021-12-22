@@ -91,10 +91,10 @@ public abstract class User {
 		this.emailAddress = emailAddress;
 	}
 	
-	public String getPersonnelNumber() {
+	public String getPersonelNumber() {
 		return personnelNumber;
 	}
-	public void setPersonnelNumber(String personnelNumber) {
+	public void setPersonelNumber(String personnelNumber) {
 		this.personnelNumber = personnelNumber;
 	}
 	
@@ -104,12 +104,13 @@ public abstract class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+
 	public String getDiscriminator() {
 		return discriminator;
 	}
 	public void setDiscriminator(String discriminator) {
 		this.discriminator = discriminator;
+
 	}
 	
 	public boolean isActive() {

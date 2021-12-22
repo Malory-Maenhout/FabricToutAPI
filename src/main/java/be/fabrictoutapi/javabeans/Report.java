@@ -19,7 +19,7 @@ public class Report implements Serializable {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getDescription() {
 		return description;
 	}
@@ -33,7 +33,6 @@ public class Report implements Serializable {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
 	public Worker getWorker() {
 		return worker;
 	}

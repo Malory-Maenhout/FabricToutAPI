@@ -1,6 +1,7 @@
 package be.fabrictoutapi.dao;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 
 public abstract class DAO<T> {
 	protected Connection connect = null;
@@ -14,4 +15,5 @@ public abstract class DAO<T> {
 	public abstract boolean update(T obj);
 	public abstract T find(int id);
 	public abstract T find(String str1, String str2);
+	public abstract ArrayList<T> findall();
 }

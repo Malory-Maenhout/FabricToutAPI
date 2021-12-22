@@ -24,9 +24,9 @@ public class APIRestConnection {
 	            Class.forName("oracle.jdbc.driver.OracleDriver");
 	            conn = DriverManager.getConnection(chaineConnexion, userName, password);
 	        } catch (SQLException e) {
-	            e.printStackTrace();
+	        	System.out.println("******************** ERREUR SQL");
 	        } catch (ClassNotFoundException e) {
-	            e.printStackTrace();
+	        	System.out.println("******************** ClassNotFoundException");
 	        }
 	    }
 
