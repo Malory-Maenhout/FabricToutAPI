@@ -14,7 +14,8 @@ public class Maintenance implements Serializable{
 	private Date date;
 	private int duration;
 	private StatusEnum status;
-	private List<Report> maintenanceReportList = new ArrayList<Report>();
+	private List<Report> reportList = new ArrayList<Report>();
+	private List<Worker> workerList = new ArrayList<Worker>();
 	private Machine machine;
 	
 	//Getters & Setters
@@ -46,17 +47,30 @@ public class Maintenance implements Serializable{
 		this.status = status;
 	}
 	
-	public List<Report> getMaintenanceReportList() {
-		return maintenanceReportList;
+	public List<Report> getReportList() {
+		return reportList;
 	}
-	public void setMaintenanceReportList(List<Report> maintenanceReportList) {
-		this.maintenanceReportList = maintenanceReportList;
+	public void setReportList(List<Report> reportList) {
+		this.reportList = reportList;
 	}	
-	public void addMaintenanceReport(Report maintenanceReport) {
-			this.maintenanceReportList.add(maintenanceReport);
+	public void addReport(Report report) {
+			this.reportList.add(report);
 	}	
-	public void removeMaintenanceReport(Report maintenanceReport) {
-		this.maintenanceReportList.remove(maintenanceReport);
+	public void removeReport(Report report) {
+		this.reportList.remove(report);
+	}
+	
+	public List<Worker> getWorkerList() {
+		return workerList;
+	}
+	public void setWorkerList(List<Worker> workerList) {
+		this.workerList = workerList;
+	}	
+	public void addWorker(Worker worker) {
+			this.workerList.add(worker);
+	}	
+	public void removeWorker(Worker worker) {
+		this.workerList.remove(worker);
 	}
 	
 	public Machine getMachine() {
@@ -71,14 +85,60 @@ public class Maintenance implements Serializable{
 		super();
 	}
 	
-	public Maintenance(int id, Date date, int duration, StatusEnum status, List<Report> maintenanceReportList, Machine machine) {
+	public Maintenance(int id, Date date, int duration, String status, List<Worker> workerList) {
 		super();
 		this.id = id;
 		this.date = date;
 		this.duration = duration;
-		this.status = status;
-		this.maintenanceReportList = maintenanceReportList;
-		this.machine = machine;
+		this.status = switch(status) {
+			case "Do" -> StatusEnum.Do;
+			case "ToDo" -> StatusEnum.ToDo;
+			case "InValidate" -> StatusEnum.InValidate;
+			case "Validate" -> StatusEnum.Validate;
+			default -> StatusEnum.Do;
+		};
+		this.workerList = workerList;
+	}
+	
+	public Maintenance(Date date, int duration, String status, List<Worker> workerList) {
+		super();
+		this.date = date;
+		this.duration = duration;
+		this.status = switch(status) {
+			case "Do" -> StatusEnum.Do;
+			case "ToDo" -> StatusEnum.ToDo;
+			case "InValidate" -> StatusEnum.InValidate;
+			case "Validate" -> StatusEnum.Validate;
+			default -> StatusEnum.Do;
+		};
+		this.workerList = workerList;
+	}
+	
+	public Maintenance(int id, Date date, int duration, String status) {
+		super();
+		this.id = id;
+		this.date = date;
+		this.duration = duration;
+		this.status = switch(status) {
+			case "Do" -> StatusEnum.Do;
+			case "ToDo" -> StatusEnum.ToDo;
+			case "InValidate" -> StatusEnum.InValidate;
+			case "Validate" -> StatusEnum.Validate;
+			default -> StatusEnum.Do;
+		};
+	}
+	
+	public Maintenance(Date date, int duration, String status) {
+		super();
+		this.date = date;
+		this.duration = duration;
+		this.status = switch(status) {
+			case "Do" -> StatusEnum.Do;
+			case "ToDo" -> StatusEnum.ToDo;
+			case "InValidate" -> StatusEnum.InValidate;
+			case "Validate" -> StatusEnum.Validate;
+			default -> StatusEnum.Do;
+		};
 	}
 	
 	//Methodes

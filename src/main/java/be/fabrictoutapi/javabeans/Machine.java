@@ -3,7 +3,6 @@ package be.fabrictoutapi.javabeans;
 import be.fabrictoutapi.enums.SizeEnum;
 import be.fabrictoutapi.enums.StatusMachineEnum;
 import be.fabrictoutapi.enums.TypeEnum;
-
 import java.io.Serializable;
 import java.util.*;
 
@@ -102,15 +101,84 @@ public class Machine implements Serializable{
 		super();
 	}
 	
-	public Machine(int id, String name, SizeEnum size, StatusMachineEnum status, boolean replace, String serialNumber, List<Area> areaList) {
+	public Machine(String name, String size, String status, boolean replace, String serialNumber,
+			String type, List<Area> areaList) {
+		super();
+		this.name = name;
+		this.size = switch(size) {
+			case "Small" -> SizeEnum.Small;
+			case "Medium" -> SizeEnum.Medium;
+			case "Large" -> SizeEnum.Large;
+			default -> SizeEnum.Small;
+		};
+		this.status = switch(status) {
+			case "Start" -> StatusMachineEnum.Start;
+			case "Stop" -> StatusMachineEnum.Stop;
+			case "Wait" -> StatusMachineEnum.Wait;
+			default -> StatusMachineEnum.Start;
+		};
+		this.replace = replace;
+		this.serialNumber = serialNumber;
+		this.type = switch(type) {
+			case "Sorting" -> TypeEnum.Sorting;
+			case "Assembly" -> TypeEnum.Assembly;
+			case "Manufacturing" -> TypeEnum.Manufacturing;
+			default -> TypeEnum.Sorting;
+		};
+		this.areaList = areaList;
+	}
+	
+	public Machine(int id, String name, String size, String status, boolean replace, String serialNumber,
+			String type) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.size = size;
-		this.status = status;
+		this.size = switch(size) {
+			case "Small" -> SizeEnum.Small;
+			case "Medium" -> SizeEnum.Medium;
+			case "Large" -> SizeEnum.Large;
+			default -> SizeEnum.Small;
+		};
+		this.status = switch(status) {
+			case "Start" -> StatusMachineEnum.Start;
+			case "Stop" -> StatusMachineEnum.Stop;
+			case "Wait" -> StatusMachineEnum.Wait;
+			default -> StatusMachineEnum.Start;
+		};
 		this.replace = replace;
-		this.areaList = areaList;
 		this.serialNumber = serialNumber;
+		this.type = switch(type) {
+			case "Sorting" -> TypeEnum.Sorting;
+			case "Assembly" -> TypeEnum.Assembly;
+			case "Manufacturing" -> TypeEnum.Manufacturing;
+			default -> TypeEnum.Sorting;
+		};
+	}
+	
+	public Machine(String name, String size, String status, boolean replace, String serialNumber,
+			String type) {
+		super();
+		this.name = name;
+		this.size = switch(size) {
+			case "Small" -> SizeEnum.Small;
+			case "Medium" -> SizeEnum.Medium;
+			case "Large" -> SizeEnum.Large;
+			default -> SizeEnum.Small;
+		};
+		this.status = switch(status) {
+			case "Start" -> StatusMachineEnum.Start;
+			case "Stop" -> StatusMachineEnum.Stop;
+			case "Wait" -> StatusMachineEnum.Wait;
+			default -> StatusMachineEnum.Start;
+		};
+		this.replace = replace;
+		this.serialNumber = serialNumber;
+		this.type = switch(type) {
+			case "Sorting" -> TypeEnum.Sorting;
+			case "Assembly" -> TypeEnum.Assembly;
+			case "Manufacturing" -> TypeEnum.Manufacturing;
+			default -> TypeEnum.Sorting;
+		};
 	}
 	
 	//Methodes

@@ -73,5 +73,12 @@ public class Site implements Serializable{
 		this.country = country;
 	}
 	
+	public Site(String city, String country) {
+		super();
+		this.city = city;
+		this.country = country;
+	}
+	
 	//Methodes
+	
 }

@@ -30,8 +30,14 @@ public class Employee extends User implements Serializable {
 	}
 	
 	public Employee(int id, String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
-			int postalCode, int phoneNumber, String emailAddress, String matricule, String password, String discriminator, boolean active) {
-		super(id, firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, matricule, password, discriminator, 
+			int postalCode, int phoneNumber, String emailAddress, String personnelNumber, String password, String discriminator, boolean active) {
+		super(id, firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, personnelNumber, password, discriminator,
+				active);
+	}
+	
+	public Employee(String firstname, String lastname, String address, Date dateOfBirth, char sexe, String city,
+			int postalCode, int phoneNumber, String emailAddress, String personnelNumber, String password, String discriminator, boolean active) {
+		super(firstname, lastname, address, dateOfBirth, sexe, city, postalCode, phoneNumber, emailAddress, personnelNumber, password, discriminator,
 				active);
 	}
 	
